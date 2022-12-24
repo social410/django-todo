@@ -1,137 +1,26 @@
-# Django #
-*.log
-*.pot
-*.pyc
-__pycache__
-db.sqlite3
-media
-
-# Backup files # 
-*.bak 
-
-# If you are using PyCharm # 
-# User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
-# AWS User-specific
-.idea/**/aws.xml
-
-# Generated files
-.idea/**/contentModel.xml
-
-# Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
-
-# Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
-
-# File-based project format
-*.iws
-
-# IntelliJ
-out/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Python # 
-*.py[cod] 
-*$py.class 
-
-# Distribution / packaging 
-.Python build/ 
-develop-eggs/ 
-dist/ 
-downloads/ 
-eggs/ 
-.eggs/ 
-lib/ 
-lib64/ 
-parts/ 
-sdist/ 
-var/ 
-wheels/ 
-*.egg-info/ 
-.installed.cfg 
-*.egg 
-*.manifest 
-*.spec 
-
-# Installer logs 
-pip-log.txt 
-pip-delete-this-directory.txt 
-
-# Unit test / coverage reports 
-htmlcov/ 
-.tox/ 
-.coverage 
-.coverage.* 
-.cache 
-.pytest_cache/ 
-nosetests.xml 
-coverage.xml 
-*.cover 
-.hypothesis/ 
-
-# Jupyter Notebook 
-.ipynb_checkpoints 
-
-# pyenv 
-.python-version 
-
-# celery 
-celerybeat-schedule.* 
-
-# SageMath parsed files 
-*.sage.py 
-
-# Environments 
-.env 
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
-
-# mkdocs documentation 
-/site 
-
-# mypy 
-.mypy_cache/ 
-
-# Sublime Text # 
-*.tmlanguage.cache 
-*.tmPreferences.cache 
-*.stTheme.cache 
-*.sublime-workspace 
-*.sublime-project 
-
-# sftp configuration file 
-sftp-config.json 
-
-# Package control specific files Package 
-Control.last-run 
-Control.ca-list 
-Control.ca-bundle 
-Control.system-ca-bundle 
-GitHub.sublime-settings 
-
-# Visual Studio Code # 
-.vscode/* 
-!.vscode/settings.json 
-!.vscode/tasks.json 
-!.vscode/launch.json 
-!.vscode/extensions.json 
-.history
+ 1  sudo apt update
+    2  sudo curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee     /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    3  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list > /dev/null
+    4  sudo apt-get update
+    5  sudo apt-get install fontconfig openjdk-11-jre
+    6  sudo apt-get install jenkins
+    7  sudo apt-get update
+    8  sudo apt-get install jenkins
+    9  sudo systemctl ebanle jenkins
+   10  sudo systemctl enable jenkins
+   11  sudo systemctl start jenkins
+   12  sudo systemctl status jenkins
+   13  java -version
+   14  netstat -a -n -o | grep "8080"
+   15  java -jar jenkins.war --ajp13Port=-1 --httpPort=9090
+   16  sudo java -jar jenkins.war --ajp13Port=-1 --httpPort=9090
+   17  java -jar jenkins.war --httpPort=8082
+   18  sud su -
+   19  sudo su -
+   20  sudo apt install docker.io -y
+   21  sudo docker build . -t todo
+   22  cd /var/lib/jenkins/workspace/sample-todo
+   23  sudo docker build . -t todo
+   24  sudo docker run --name todo -d -p 8000:8000 todo
+   25  sudo usermod -aG docker jenkins
+   26  sudo systemctl restart jenkins
